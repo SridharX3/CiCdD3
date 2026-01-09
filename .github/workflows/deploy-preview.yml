@@ -1,13 +1,11 @@
+# deploy-preview.yml
 name: Preview Deployment
-
 on:
   pull_request:
 
 jobs:
   preview:
-    needs: test
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 

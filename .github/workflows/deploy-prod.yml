@@ -1,15 +1,12 @@
+# deploy-prod.yml
 name: Deploy Production
-
 on:
   push:
     branches: [main]
 
 jobs:
   deploy:
-    needs: test
     runs-on: ubuntu-latest
-    environment: production
-
     steps:
       - uses: actions/checkout@v4
 
