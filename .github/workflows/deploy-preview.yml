@@ -1,4 +1,4 @@
-# deploy-preview.yml
+# deploy-preview.yml *
 name: Preview Deployment
 on:
   pull_request:
