@@ -10,7 +10,6 @@ on:
 jobs:
   rollback:
     runs-on: ubuntu-latest
-    environment: production
 
     steps:
       - uses: actions/setup-node@v4
