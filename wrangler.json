@@ -1,0 +1,13 @@
+{
+  "name": "my-worker",
+  "main": "src/index.js",
+  "compatibility_date": "2024-12-01",
+  "env": {
+    "preview": {
+      "name": "my-worker-preview"
+    },
+    "production": {
+      "name": "my-worker-prod"
+    }
+  }
+}

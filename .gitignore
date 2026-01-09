@@ -1,0 +1,36 @@
+# ======================
+# Node.js
+# ======================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ======================
+# Cloudflare / Wrangler
+# ======================
+.wrangler/
+dist/
+
+# ======================
+# Test artifacts
+# ======================
+test-results/
+coverage/
+
+# ======================
+# GitHub Actions
+# ======================
+actions-runner/
+
+# ======================
+# OS files
+# ======================
+.DS_Store
+Thumbs.db
+
+# ======================
+# Environment files
+# ======================
+.env
+.env.*

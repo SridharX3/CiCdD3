@@ -1,0 +1,23 @@
+name: Rollback Production
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Worker version to rollback to"
+        required: true
+
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npx wrangler rollback ${{ inputs.version }}
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
